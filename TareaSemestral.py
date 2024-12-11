@@ -33,7 +33,7 @@ G = nx.Graph()
 for index, row in df.iterrows():
     G.add_node(row['Comuna'], pos=(row['Longitud (decimal)'], row['Latitud (Decimal)']))
 
-# Agregar aristas solo entre ciudades que están a 100 km o menos de distancia
+# Agregar aristas solo entre ciudades que están a 250 km o menos de distancia
 for i in range(len(df)):
     ciudad1 = df.loc[i, 'Comuna']
     lat1 = df.loc[i, 'Latitud (Decimal)']
